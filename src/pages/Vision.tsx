@@ -48,12 +48,14 @@ export default function Vision() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-primary/5 via-background to-muted/30">
-        <div className="container-custom">
+      <section className="section-padding relative bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)'}}>
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="container-custom relative z-10">
           <SectionHeading
             badge="Vision & Mission"
             title="Driving the Future of Enterprise Solutions"
             description="Our vision guides our innovation, our mission defines our purpose, and our philosophy shapes every interaction with our valued clients."
+            variant="light"
           />
         </div>
       </section>

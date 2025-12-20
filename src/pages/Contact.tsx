@@ -80,12 +80,14 @@ export default function Contact() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-primary/5 via-background to-muted/30">
-        <div className="container-custom">
+      <section className="section-padding relative bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80)'}}>
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="container-custom relative z-10">
           <SectionHeading
             badge="Contact Us"
             title="Talk to Our ERP Experts"
             description="Have questions about our ERP solutions? We're here to help. Reach out to us and let's discuss how we can transform your business."
+            variant="light"
           />
         </div>
       </section>

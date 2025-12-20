@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Download, BarChart3, Users, Package, DollarSign, Settings, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function HeroSection() {
   return (
@@ -31,14 +32,18 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="cta" size="xl">
-                Book a Demo
-                <ArrowRight className="w-5 h-5" />
-              </Button>
-              <Button variant="outline" size="xl">
-                <Download className="w-5 h-5" />
-                Download Brochure
-              </Button>
+              <Link to="/contact">
+                <Button variant="cta" size="xl">
+                  Book a Demo
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </Link>
+              <a href="https://savioerp.com/Catlogue/SAVIO%20ERP%20Software.pdf" download="SAVIO ERP Software.pdf">
+                <Button variant="outline" size="xl">
+                  <Download className="w-5 h-5" />
+                  Download Brochure
+                </Button>
+              </a>
             </div>
 
             {/* Stats */}

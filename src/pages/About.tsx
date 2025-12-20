@@ -36,12 +36,14 @@ export default function About() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-primary/5 via-background to-muted/30">
-        <div className="container-custom">
+      <section className="section-padding relative bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)'}}>
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="container-custom relative z-10">
           <SectionHeading
             badge="About Us"
             title="Empowering Businesses Since 2009"
             description="We are a leading ERP solutions provider committed to transforming how businesses operate through innovative technology and exceptional service."
+            variant="light"
           />
         </div>
       </section>

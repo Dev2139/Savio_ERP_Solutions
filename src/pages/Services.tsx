@@ -57,12 +57,14 @@ export default function Services() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-primary/5 via-background to-muted/30">
-        <div className="container-custom">
+      <section className="section-padding relative bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)'}}>
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="container-custom relative z-10">
           <SectionHeading
             badge="Our Services"
             title="Quality Services for Your Success"
             description="We provide comprehensive ERP services designed to help your business thrive in the digital age."
+            variant="light"
           />
         </div>
       </section>

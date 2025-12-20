@@ -149,25 +149,27 @@ export default function SavioERP() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-primary/5 via-background to-muted/30">
-        <div className="container-custom">
+      <section className="section-padding relative bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2019&q=80)'}}>
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="container-custom relative z-10">
           <SectionHeading
             badge="Savio ERP"
             title="Complete ERP Solution for Modern Enterprises"
             description="A comprehensive suite of integrated modules designed to streamline every aspect of your business operations."
+            variant="light"
           />
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">
-            <div className="px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium">
+            <div className="px-4 py-2 bg-white/20 rounded-full text-white text-sm font-medium">
               20+ Modules
             </div>
-            <div className="px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium">
+            <div className="px-4 py-2 bg-white/20 rounded-full text-white text-sm font-medium">
               Cloud Ready
             </div>
-            <div className="px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium">
+            <div className="px-4 py-2 bg-white/20 rounded-full text-white text-sm font-medium">
               Fully Customizable
             </div>
-            <div className="px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium">
+            <div className="px-4 py-2 bg-white/20 rounded-full text-white text-sm font-medium">
               Real-time Analytics
             </div>
           </div>
