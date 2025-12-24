@@ -28,12 +28,13 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1" role="navigation" aria-label="Primary">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                aria-current={isActive(item.path) ? 'page' : undefined}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
                   isActive(item.path)
                     ? 'text-primary bg-primary/5'
                     : 'text-foreground/70 hover:text-primary hover:bg-primary/5'
@@ -58,8 +59,12 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
+            type="button"
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            aria-controls="mobile-menu"
+            aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md text-foreground hover:bg-muted transition-colors"
+            className="lg:hidden p-2 rounded-md text-foreground hover:bg-muted transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -68,14 +73,15 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-card border-b border-border">
-          <nav className="container-custom py-4 flex flex-col gap-2">
+        <div className="lg:hidden bg-card border-b border-border" id="mobile-menu">
+          <nav className="container-custom py-4 flex flex-col gap-2" role="navigation" aria-label="Mobile Primary">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className={`px-4 py-3 text-sm font-medium rounded-md transition-colors ${
+                aria-current={isActive(item.path) ? 'page' : undefined}
+                className={`px-4 py-3 text-sm font-medium rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
                   isActive(item.path)
                     ? 'text-primary bg-primary/10'
                     : 'text-foreground/70 hover:text-primary hover:bg-muted'

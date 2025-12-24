@@ -31,13 +31,13 @@ export function Footer() {
               Empowering businesses with comprehensive ERP solutions that streamline operations and drive growth.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-9 h-9 rounded-full bg-footer-foreground/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-footer-foreground/10 flex items-center justify-center hover:bg-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring">
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-footer-foreground/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-footer-foreground/10 flex items-center justify-center hover:bg-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-footer-foreground/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-footer-foreground/10 flex items-center justify-center hover:bg-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring">
                 <Facebook className="w-4 h-4" />
               </a>
             </div>
@@ -93,7 +93,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <a href="tel:+1234567890" className="text-footer-foreground/70 hover:text-primary transition-colors text-sm">
+                <a href="tel:+919687276300" className="text-footer-foreground/70 hover:text-primary transition-colors text-sm">
                   +91 9687276300
                 </a>
               </li>
